@@ -1,0 +1,79 @@
+mypairrdd.collect()
+mypairrdd.first()
+mypairrdd.take(2)
+mypairrdd.takeOrdered(2)
+mypairrdd.saveAsTextFile("sparkoptput/actionresult")
+
+
+Int search:
+double rdd
+actions
+saving files option
+myrdd.stats()
+
+Next topic storage level
+spark web UI 
+
+
+
+##24 April Pawan simplilearn
+pawanirmc@gmail.com
+
+-DAG-
+Direct Acyclic Graph
+It will be created while a series of action has been executed
+
+# Word Count:
+
+from pyspark import SparkContext
+from pyspark.sql import SparkSession
+
+sc=SparkContext=SparkSession.builder.AppName("word count").master("local[*]").getOrCreate().SparkContext
+
+list = ["hadoop", "hadoop", "pyspark", "pyspark", "pyspark", "python", "python", "pyspark", "pyspark"]
+
+mywordsrdd = sc.parallelize(list)
+mywordspair = mywordsrdd.map( lambda word : (word,1))
+mywordscount = mywordspair.reduceByKey( lambda x,y:x+y )
+
+for word in myowrdscount.collect():
+	print(word)
+
+Actions:
+
+map
+flatmap
+join
+groupbykey
+filter
+join
+
+
+Narrow Trandformations:
+	map,flatmap,filter,
+Wide Transformations:
+	join, groupbykey
+
+# Caching
+1.cache()
+2.persist()
+	1. MEMORY_ONLY
+	2. MEMORY_AND_DISK_ONLY
+	3. MEMORY_ONLY_SER
+	4. DISK_ONLY
+	5. MEMORU_ONLY_2
+	6. MEMORY_AND_DISK_2
+learn uses of persist
+
+#Hash and Range -> ways of storing/passing data
+
+###### spark SQL#######
+
+read data from any DB source like cav,RDBMS,parque,Nosql,HBase
+Use DataSoource API and make DataFrame on it.
+
+SparkSession is unified API for all type of context
+
+
+
+
