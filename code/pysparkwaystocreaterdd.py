@@ -1,3 +1,4 @@
+from pyspark.sql import SparkSession
 # Multiple ways to crete rdd
 spark = sparksession.builder.appname("ways to create rdd").master('local[*]').getorcreate()
 
