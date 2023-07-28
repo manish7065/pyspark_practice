@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Installing dependencies...",
+      "type": "shell",
+      "command": "pip install -r requirements.txt & git config --global user.name manish & git config --global user.email manumi296@gmail.com",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "runOptions": { "runOn": "folderOpen" }
+    }
+  ]
+}
